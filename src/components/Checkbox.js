@@ -8,34 +8,29 @@ export default class Checkbox extends Component {
       isChecked: false,
     };
   }
+
   checked() {
-    if (this.state.isChecked) {
-      this.setState({
-        isChecked: false,
-      });
-    } else
-      this.setState({
-        isChecked: true,
-      });
+    this.setState({
+      isChecked: !this.state.isChecked,
+    });
   }
 
   render() {
-    const classChecked = this.state.isChecked ? (
-      <label className="label-checked" for={this.props.checkboxName}>
-        {this.props.checkboxName}
-      </label>
-    ) : (
-      <label for={this.props.checkboxName}>{this.props.checkboxName}</label>
-    );
+    const { checkboxName } = this.props;
     return (
       <div>
         <input
-          id={this.props.checkboxName}
+          id={checkboxName}
           type="checkbox"
           onChange={this.checked.bind(this)}
           checked={this.state.isChecked}
         />
-        {classChecked}
+        <label
+          className={this.state.isChecked ? 'label-checked' : ''}
+          for={checkboxName}
+        >
+          {checkboxName}
+        </label>
       </div>
     );
   }
