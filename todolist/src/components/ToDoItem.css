@@ -1,13 +1,48 @@
 .toDoItem-block {
-  background: #fff;
-  flex: 0 0 500px;
+  background: rgb(62, 106, 146);
+  flex: 0 1 400px;
   margin: 10px;
   padding: 20px;
   font-size: 20px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px rgb(31, 68, 101);
+}
+.delete-button {
+  font-size: 30px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgb(31, 68, 101);
+}
+.delete-button:hover {
+  color: rgb(230, 222, 222);
 }
 .toDoName {
-  border: none;
   border-bottom: 1px solid;
   width: 100%;
   margin: 20px 0;
+  background: none;
+  font-size: 18px;
+}
+.toDoName::placeholder {
+  color: rgba(230, 222, 222, 0.5);
+}
+.itemName {
+  width: 80%;
+  padding: 5px;
+  margin: 20px 0;
+  color: rgb(14, 43, 70);
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px rgb(31, 68, 101);
+}
+.itemName::placeholder {
+  color: rgba(126, 122, 122, 0.6);
+}
+
+.item-button {
+  font-size: 30px;
+  color: #fff;
+  vertical-align: middle;
+}
+.item-button:hover {
+  color: rgb(230, 222, 222);
 }

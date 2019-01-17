@@ -21,13 +21,16 @@ export default class Checkbox extends Component {
 
   render() {
     const classChecked = this.state.isChecked ? (
-      <span className="label-checked">{this.props.checkboxName}</span>
+      <label className="label-checked" for={this.props.checkboxName}>
+        {this.props.checkboxName}
+      </label>
     ) : (
-      <span>{this.props.checkboxName}</span>
+      <label for={this.props.checkboxName}>{this.props.checkboxName}</label>
     );
     return (
       <div>
         <input
+          id={this.props.checkboxName}
           type="checkbox"
           onChange={this.checked.bind(this)}
           checked={this.state.isChecked}

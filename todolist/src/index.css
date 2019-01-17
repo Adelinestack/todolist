@@ -4,3 +4,14 @@ body {
   font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   background: rgb(230, 222, 222);
 }
+button {
+  border: none;
+  background: none;
+  outline: none;
+}
+input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}

@@ -3,14 +3,19 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
 }
 h1 {
-  margin: 0 20px;
+  font-size: 60px;
+  flex: 1 0 80%;
   color: rgb(62, 106, 146);
 }
 .addList-button {
+  flex: 1 0 20%;
   font-size: 80px;
-  border: none;
-  background: none;
   color: rgb(62, 106, 146);
+}
+.addList-button:hover {
+  color: rgb(44, 95, 143);
 }

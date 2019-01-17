@@ -3,9 +3,9 @@ import Checkbox from './Checkbox';
 import './ToDoItem.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendarMinus } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarPlus } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faCalendarMinus);
+library.add(faCalendarPlus);
 
 export default class ToDoItem extends Component {
   constructor(props) {
@@ -42,20 +42,24 @@ export default class ToDoItem extends Component {
     ));
     return (
       <div className="toDoItem-block">
-        <button onClick={this.props.onDeleteItem}>x</button>
+        <button className="delete-button" onClick={this.props.onDeleteItem}>
+          x
+        </button>
         <input
           className="toDoName"
           type="text"
           onChange={this.onInputChange.bind(this, 'toDoName')}
+          placeholder="To do list name"
         />
         <input
           className="itemName"
           type="text"
           value={this.state.itemInputName}
           onChange={this.onInputChange.bind(this, 'itemInputName')}
+          placeholder="Item name"
         />
-        <button onClick={this.addItem.bind(this)}>
-          <FontAwesomeIcon icon="calendar-minus" />
+        <button className="item-button" onClick={this.addItem.bind(this)}>
+          <FontAwesomeIcon icon="calendar-plus" />
         </button>
         {itemList}
       </div>
